@@ -86,7 +86,7 @@ La solución se puede obtener mediante métodos gráficos o herramientas como Ex
 
 ### 🔍 Visualización en GeoGebra
 
-![Solución gráfica en GeoGebra](https://www.geogebra.org/resource/nqmgmtwy/KnJDgmxZzP2eBG2G/material-nqmgmtwy-thumb@l.png)
+![Solución gráfica en GeoGebra](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Imagen02.png?raw=true)
 
 [📊 Ver solución interactiva en GeoGebra](https://www.geogebra.org/graphing/nqmgmtwy)
 

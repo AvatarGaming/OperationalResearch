@@ -43,7 +43,7 @@ Maximizar Z = 3X₁ + 5X₂
 
 ## Solución Gráfica
 
-![Solución gráfica en GeoGebra](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Wyndor%20Glass%20Co..png?raw=true)
+![Solución gráfica en GeoGebra](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Imagen01.png?raw=true)
 
 **Enlace a la solución**: [https://www.geogebra.org/graphing/x92wsx97](https://www.geogebra.org/graphing/x92wsx97)
 
