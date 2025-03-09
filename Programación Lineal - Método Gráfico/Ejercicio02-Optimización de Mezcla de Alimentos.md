@@ -32,16 +32,34 @@ $$0.02X_1 + 0.06X_2 \leq 0.05(X_1 + X_2)$$
 
 Las restricciones se simplifican cambiando los términos en $X_1$ y $X_2$ al lado izquierdo de cada desigualdad, con sólo una constante del lado derecho. El modelo completo es:
 
-## Modelo Matemático de Programación Lineal
 
-$$\text{Minimizar } z = 0.3X_1 + 0.9X_2$$
+## Modelo Matemático de Programación Lineal para Ozark Farms
 
-Sujeto a:
-$$X_1 + X_2 \geq 800$$
-$$0.21X_1 - 0.30X_2 \leq 0$$
-$$0.03X_1 - 0.01X_2 \geq 0$$
-$$X_1 \geq 0$$
-$$X_2 \geq 0$$
+## 🧮 Formulación del Problema
+
+| Componente | Descripción | Expresión Matemática |
+|:----------:|-------------|----------------------|
+| 🎯 **Función Objetivo** | Minimizar el costo total diario | $$\text{Min } z = 0.3X_1 + 0.9X_2$$ |
+
+## ⚖️ Restricciones
+
+| N° | Tipo | Descripción | Expresión Matemática |
+|:--:|:----:|-------------|----------------------|
+| 1 | Cantidad | Consumo mínimo diario de alimento | $$X_1 + X_2 \geq 800$$ |
+| 2 | Nutrición | Requerimiento mínimo de proteína (30%) | $$0.09X_1 + 0.60X_2 \geq 0.3(X_1 + X_2)$$ |
+|   |  | Forma simplificada | $$-0.21X_1 + 0.30X_2 \geq 0$$ |
+|   |  | Forma alternativa | $$0.21X_1 - 0.30X_2 \leq 0$$ |
+| 3 | Nutrición | Límite máximo de fibra (5%) | $$0.02X_1 + 0.06X_2 \leq 0.05(X_1 + X_2)$$ |
+|   |  | Forma simplificada | $$-0.03X_1 + 0.01X_2 \leq 0$$ |
+|   |  | Forma alternativa | $$0.03X_1 - 0.01X_2 \geq 0$$ |
+| 4 | No negatividad | Variables no pueden ser negativas | $$X_1 \geq 0$$ |
+| 5 | No negatividad | Variables no pueden ser negativas | $$X_2 \geq 0$$ |
+
+
+Donde:
+- $X_1$ = libras de maíz en la mezcla diaria 🌽
+- $X_2$ = libras de soya en la mezcla diaria 🌱
+
 
 
 # 📊 Optimización de Mezcla de Alimentos en Ozark Farms
