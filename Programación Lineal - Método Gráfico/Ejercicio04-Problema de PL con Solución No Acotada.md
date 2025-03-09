@@ -1,99 +1,80 @@
-# Ejercicio 04: Ejemplo de un Problema de Programación Lineal con Solución No Acotada
+# Análisis de un Problema de Programación Lineal con Solución No Acotada
 
-## Planteamiento del problema
+## 📊 Planteamiento del problema
 
-Una empresa ha formulado el siguiente problema de programación lineal (LP):
+Una empresa ha formulado el siguiente problema de programación lineal:
 
-**Maximizar beneficio:** 
+**Función objetivo (maximizar):** 
 $$Z = 3X_1 + 5X_2$$
 
-**Sujeto a:**
+**Restricciones:**
 $$X_1 \geq 5$$
 $$X_2 \leq 10$$
 $$X_1 + 2X_2 \geq 10$$
 $$X_1, X_2 \geq 0$$
 
-## Análisis del problema
+## 📈 Representación gráfica
 
-Debido a que este es un problema de maximización y la región factible se extiende infinitamente hacia la derecha, se presenta una situación de **no acotamiento** o una **solución no acotada** ⚠️.
+La solución puede visualizarse en GeoGebra: [Ver gráfico interactivo](https://www.geogebra.org/graphing/zuumhfae)
 
-Esto implica que el problema ha sido formulado incorrectamente. Sería maravilloso que la empresa pudiera producir un número infinito de unidades de $X_1$ (¡con un beneficio de $\$3$ cada una!), pero obviamente ninguna empresa tiene:
+![Gráfico de Programación Lineal](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Imagen03.png?raw=true)
 
-- 🏭 Recursos infinitos disponibles
-- 📊 Demanda infinita de productos
+## 🔍 Análisis de la región factible
 
-## Representación tabular
+La región factible está delimitada por tres puntos importantes:
 
-| Restricción | Descripción | Expresión matemática |
-|-------------|-------------|----------------------|
-| Restricción 1 | Producción mínima de $X_1$ | $X_1 \geq 5$ |
-| Restricción 2 | Límite superior para $X_2$ | $X_2 \leq 10$ |
-| Restricción 3 | Restricción combinada | $X_1 + 2X_2 \geq 10$ |
-| No negatividad | Variables no negativas | $X_1, X_2 \geq 0$ |
+| Punto | Coordenadas | Descripción |
+|-------|-------------|-------------|
+| A     | (5, 10)     | Intersección de $X_1 = 5$ y $X_2 = 10$ |
+| B     | (5, 2.5)    | Intersección de $X_1 = 5$ y $X_1 + 2X_2 = 10$ |
+| C     | (10, 0)     | Intersección de $X_1 + 2X_2 = 10$ y $X_2 = 0$ |
 
-# Análisis de un Problema de Programación Lineal con Solución No Acotada
+La región factible se extiende indefinidamente hacia la derecha del plano, lo que indica una **solución no acotada** ⚠️.
 
-## Interpretación gráfica del problema
+## 📝 Evaluación de la función objetivo
 
-![Gráfico de Programación Lineal en GeoGebra](https://www.geogebra.org/graphing/zuumhfae)
+Calculando el valor de la función objetivo en cada vértice:
 
-```html
-<img src="https://www.geogebra.org/graphing/zuumhfae" alt="Gráfico de Programación Lineal en GeoGebra">
-```
+| Punto | Coordenadas | Valor de $Z = 3X_1 + 5X_2$ | Cálculo |
+|-------|-------------|----------------------------|---------|
+| A     | (5, 10)     | 65                         | $3(5) + 5(10) = 15 + 50 = 65$ |
+| B     | (5, 2.5)    | 27.5                       | $3(5) + 5(2.5) = 15 + 12.5 = 27.5$ |
+| C     | (10, 0)     | 30                         | $3(10) + 5(0) = 30 + 0 = 30$ |
 
-## Planteamiento del problema
+## ⚠️ Diagnóstico de solución no acotada
 
-Se presenta un problema de programación lineal con la siguiente formulación:
+Este problema presenta una **solución no acotada** por las siguientes razones:
 
-**Función objetivo (maximizar):** 
-$$Z(x,y) = 3x + 5y$$
+1. La región factible se extiende infinitamente en la dirección positiva del eje $X_1$
+2. El coeficiente de $X_1$ en la función objetivo es positivo (3)
+3. No hay restricciones superiores para la variable $X_1$
 
-**Sujeto a las restricciones:**
-$$x \geq 5 \quad \text{(ec1)}$$
-$$y \leq 10 \quad \text{(ec2)}$$
-$$x + 2y \geq 10 \quad \text{(ec3)}$$
-$$x \geq 0 \quad \text{(ec4)}$$
-$$y \geq 0 \quad \text{(ec5)}$$
+## 🧮 Comportamiento de la función objetivo
 
-## Región factible
+Si analizamos el comportamiento en la dirección de crecimiento:
+- Partiendo del punto A (5,10) con $Z=65$
+- Si aumentamos $X_1$ mientras mantenemos $X_2=10$:
+  - Para $X_1=100$: $Z = 3(100) + 5(10) = 300 + 50 = 350$
+  - Para $X_1=1000$: $Z = 3(1000) + 5(10) = 3000 + 50 = 3050$
 
-La región factible está delimitada por los puntos de intersección:
-- Punto A = (5, 10) → Intersección de ec1 y ec2
-- Punto B = (5, 2.5) → Intersección de ec3 y ec1
-- Punto C = (10, 0) → Intersección de ec3 y ec5
+Esto demuestra que $Z$ puede crecer ilimitadamente.
 
-La región factible se extiende indefinidamente hacia el lado derecho del gráfico (valores de $x$ crecientes), lo que indica una solución **no acotada** ⚠️.
+## 🏭 Implicaciones prácticas
 
-## Evaluación de la función objetivo
-
-La función objetivo ha sido evaluada en los vértices de la región factible:
-
-| Punto | Coordenadas | Valor de $Z = 3x + 5y$ |
-|-------|-------------|------------------------|
-| A     | (5, 10)     | $Z(A) = 65$            |
-| B     | (5, 2.5)    | $Z(B) = 27.5$          |
-| C     | (10, 0)     | $Z(C) = 30$            |
-
-## Análisis de resultados
-
-1. El valor máximo de la función objetivo en los vértices se encuentra en el punto A = (5, 10) con $Z = 65$.
-
-2. Sin embargo, dado que la región se extiende infinitamente hacia la derecha y el coeficiente de $x$ en la función objetivo es positivo (3), el valor de $Z$ puede aumentar sin límite al incrementar el valor de $x$.
-
-3. La línea de nivel de la función objetivo (`ec6: 3x + 5y = 65`) que pasa por el punto A muestra que al moverse hacia la derecha (aumentando $x$), manteniendo $y = 10$, se pueden encontrar valores cada vez mayores para $Z$.
-
-## Conclusión
-
-🔍 Este problema presenta una **solución no acotada** porque:
-
-- La región factible se extiende infinitamente en la dirección positiva del eje $x$.
-- El coeficiente de $x$ en la función objetivo es positivo (3).
-- No hay restricciones superiores para la variable $x$.
-
-En aplicaciones prácticas, esto indicaría que el modelo matemático está incompleto, ya que en situaciones reales:
+La solución no acotada indica que el modelo matemático está incompleto, ya que en situaciones reales:
 
 - 🏭 Las empresas tienen capacidades de producción limitadas
 - 🛒 Los mercados tienen demanda finita
 - 🧪 Los recursos disponibles son limitados
 
-Para obtener una solución realista, se debería reformular el problema añadiendo restricciones adicionales, como una cota superior para $x$.
+## 🔧 Corrección del modelo
+
+Para obtener una solución realista, se debería reformular el problema añadiendo restricciones adicionales, como:
+
+$$X_1 \leq 100 \text{ (capacidad máxima de producción)}$$
+
+O bien incluir costos fijos que limiten la ventaja de incrementar $X_1$ indefinidamente.
+
+## 📘 Conclusión
+
+Este ejercicio ilustra la importancia de definir correctamente las restricciones en un problema de programación lineal. Un modelo que produce una solución no acotada generalmente carece de restricciones que reflejen las limitaciones físicas, económicas o logísticas del mundo real.
