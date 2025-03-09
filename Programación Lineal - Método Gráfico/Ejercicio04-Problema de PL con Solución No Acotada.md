@@ -13,6 +13,7 @@ $$X_2 \leq 10$$
 $$X_1 + 2X_2 \geq 10$$
 $$X_1, X_2 \geq 0$$
 
+
 ## 📈 Visualización gráfica
 
 El problema se puede visualizar en GeoGebra mediante el siguiente enlace:
