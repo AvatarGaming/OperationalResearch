@@ -1,4 +1,4 @@
-# Análisis de un Problema de Programación Lineal con Solución No Acotada
+# Problema de Programación Lineal con Solución No Acotada
 
 ## 📊 Planteamiento del problema
 
@@ -7,74 +7,73 @@ Una empresa ha formulado el siguiente problema de programación lineal:
 **Función objetivo (maximizar):** 
 $$Z = 3X_1 + 5X_2$$
 
-**Restricciones:**
+**Sujeto a las restricciones:**
 $$X_1 \geq 5$$
 $$X_2 \leq 10$$
 $$X_1 + 2X_2 \geq 10$$
 $$X_1, X_2 \geq 0$$
 
-## 📈 Representación gráfica
+## 📈 Visualización gráfica
 
-La solución puede visualizarse en GeoGebra: [Ver gráfico interactivo](https://www.geogebra.org/graphing/zuumhfae)
+El problema se puede visualizar en GeoGebra mediante el siguiente enlace:
+[Ver solución gráfica en GeoGebra](https://www.geogebra.org/graphing/zuumhfae)
 
-![Gráfico de Programación Lineal](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Imagen03.png?raw=true)
+![Solución gráfica](https://github.com/AvatarGaming/OperationalResearch/blob/main/Programaci%C3%B3n%20Lineal%20-%20M%C3%A9todo%20Gr%C3%A1fico/Imagen03.png?raw=true)
 
-## 🔍 Análisis de la región factible
+## 🔍 Región factible
 
-La región factible está delimitada por tres puntos importantes:
+La región factible está delimitada por los siguientes puntos de intersección:
 
 | Punto | Coordenadas | Descripción |
-|-------|-------------|-------------|
-| A     | (5, 10)     | Intersección de $X_1 = 5$ y $X_2 = 10$ |
-| B     | (5, 2.5)    | Intersección de $X_1 = 5$ y $X_1 + 2X_2 = 10$ |
-| C     | (10, 0)     | Intersección de $X_1 + 2X_2 = 10$ y $X_2 = 0$ |
+|:-----:|:-----------:|-------------|
+| A     | (5, 10)     | Intersección de las ecuaciones $X_1 = 5$ y $X_2 = 10$ |
+| B     | (5, 2.5)    | Intersección de las ecuaciones $X_1 = 5$ y $X_1 + 2X_2 = 10$ |
+| C     | (10, 0)     | Intersección de las ecuaciones $X_1 + 2X_2 = 10$ y $X_2 = 0$ |
 
-La región factible se extiende indefinidamente hacia la derecha del plano, lo que indica una **solución no acotada** ⚠️.
+La región se extiende indefinidamente hacia la derecha en el plano cartesiano, lo que indica una **solución no acotada** ⚠️.
 
 ## 📝 Evaluación de la función objetivo
 
-Calculando el valor de la función objetivo en cada vértice:
+Evaluamos la función objetivo $Z = 3X_1 + 5X_2$ en cada uno de los vértices de la región factible:
 
-| Punto | Coordenadas | Valor de $Z = 3X_1 + 5X_2$ | Cálculo |
-|-------|-------------|----------------------------|---------|
-| A     | (5, 10)     | 65                         | $3(5) + 5(10) = 15 + 50 = 65$ |
-| B     | (5, 2.5)    | 27.5                       | $3(5) + 5(2.5) = 15 + 12.5 = 27.5$ |
-| C     | (10, 0)     | 30                         | $3(10) + 5(0) = 30 + 0 = 30$ |
+| Punto | Coordenadas | Cálculo | Valor de Z |
+|:-----:|:-----------:|:-------:|:----------:|
+| A     | (5, 10)     | $3(5) + 5(10) = 15 + 50$ | $Z(A) = 65$ |
+| B     | (5, 2.5)    | $3(5) + 5(2.5) = 15 + 12.5$ | $Z(B) = 27.5$ |
+| C     | (10, 0)     | $3(10) + 5(0) = 30 + 0$ | $Z(C) = 30$ |
 
-## ⚠️ Diagnóstico de solución no acotada
+## 🧮 Análisis de resultados
 
-Este problema presenta una **solución no acotada** por las siguientes razones:
+1. Entre los vértices analizados, el valor máximo de la función objetivo se alcanza en el punto A = (5, 10) con $Z = 65$.
 
-1. La región factible se extiende infinitamente en la dirección positiva del eje $X_1$
+2. La línea de nivel de la función objetivo (ec6: $3X_1 + 5X_2 = 65$) que pasa por el punto A muestra que:
+   - Al moverse horizontalmente hacia la derecha (aumentando $X_1$), manteniendo $X_2 = 10$
+   - Por cada unidad que aumenta $X_1$, el valor de Z aumenta en 3 unidades
+
+3. Como la región factible se extiende infinitamente en la dirección positiva del eje $X_1$ y el coeficiente de $X_1$ en la función objetivo es positivo (3), el valor de Z puede crecer sin límite.
+
+## 🚫 Problema de no acotamiento
+
+El problema presenta una **solución no acotada** debido a tres factores clave:
+
+1. La región factible se extiende infinitamente en dirección positiva del eje $X_1$
 2. El coeficiente de $X_1$ en la función objetivo es positivo (3)
-3. No hay restricciones superiores para la variable $X_1$
+3. No existe una restricción superior para la variable $X_1$
 
-## 🧮 Comportamiento de la función objetivo
+## 🔧 Implicaciones prácticas
 
-Si analizamos el comportamiento en la dirección de crecimiento:
-- Partiendo del punto A (5,10) con $Z=65$
-- Si aumentamos $X_1$ mientras mantenemos $X_2=10$:
-  - Para $X_1=100$: $Z = 3(100) + 5(10) = 300 + 50 = 350$
-  - Para $X_1=1000$: $Z = 3(1000) + 5(10) = 3000 + 50 = 3050$
+En aplicaciones reales, una solución no acotada indica que el modelo matemático está incompleto, ya que en la práctica:
 
-Esto demuestra que $Z$ puede crecer ilimitadamente.
+- 🏭 Ninguna empresa dispone de recursos de producción infinitos
+- 🛒 No existe demanda infinita para ningún producto
+- 🧪 Los recursos materiales siempre son limitados
 
-## 🏭 Implicaciones prácticas
+## ✅ Solución propuesta
 
-La solución no acotada indica que el modelo matemático está incompleto, ya que en situaciones reales:
+Para obtener un modelo más realista, se debería reformular el problema añadiendo restricciones adicionales, como:
 
-- 🏭 Las empresas tienen capacidades de producción limitadas
-- 🛒 Los mercados tienen demanda finita
-- 🧪 Los recursos disponibles son limitados
+1. Una cota superior para $X_1$: $X_1 ≤ M$ donde M representa la capacidad máxima de producción
+2. Restricciones de recursos: $aX_1 + bX_2 ≤ R$ donde R representa la disponibilidad de recursos
+3. Restricciones de demanda máxima del mercado
 
-## 🔧 Corrección del modelo
-
-Para obtener una solución realista, se debería reformular el problema añadiendo restricciones adicionales, como:
-
-$$X_1 \leq 100 \text{ (capacidad máxima de producción)}$$
-
-O bien incluir costos fijos que limiten la ventaja de incrementar $X_1$ indefinidamente.
-
-## 📘 Conclusión
-
-Este ejercicio ilustra la importancia de definir correctamente las restricciones en un problema de programación lineal. Un modelo que produce una solución no acotada generalmente carece de restricciones que reflejen las limitaciones físicas, económicas o logísticas del mundo real.
+Esto permitiría obtener una solución acotada que refleje mejor las condiciones del mundo real.
