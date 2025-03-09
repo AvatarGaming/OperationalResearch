@@ -7,11 +7,18 @@ Una empresa ha formulado el siguiente problema de programación lineal:
 **Función objetivo (maximizar):** 
 $$Z = 3X_1 + 5X_2$$
 
-**Sujeto a las restricciones:**
-$$X_1 \geq 5$$
-$$X_2 \leq 10$$
-$$X_1 + 2X_2 \geq 10$$
-$$X_1, X_2 \geq 0$$
+## 📝 Representación tabular de restricciones
+
+| N° | Restricción | Descripción | Expresión matemática |
+|:--:|-------------|-------------|----------------------|
+| 1  | Restricción 1 | Producción mínima de $X_1$ | $X_1 \geq 5$ |
+| 2  | Restricción 2 | Límite superior para $X_2$ | $X_2 \leq 10$ |
+| 3  | Restricción 3 | Restricción combinada | $X_1 + 2X_2 \geq 10$ |
+| 4  | Restricción 4 | No negatividad de $X_1$ | $X_1 \geq 0$ |
+| 5  | Restricción 5 | No negatividad de $X_2$ | $X_2 \geq 0$ |
+
+Nota: Las restricciones 4 y 5 son redundantes con la restricción 1 y las condiciones básicas del problema, pero se incluyen por completitud.
+
 
 
 ## 📈 Visualización gráfica
