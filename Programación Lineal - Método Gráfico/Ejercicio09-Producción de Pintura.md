@@ -49,6 +49,12 @@ $$\text{Maximizar}: Z(x,y) = 50X + 60Y \tag{1}$$
 
 Utilizando GeoGebra, hemos representado gráficamente el problema donde la región factible está sombreada en azul:
 
+El problema se puede visualizar en GeoGebra mediante el siguiente enlace:
+[Ver solución gráfica en GeoGebra](https://www.geogebra.org/graphing/u8qcmsvn)
+
+![Solución gráfica](![alt text](image.png))
+
+
 La región factible está definida por la intersección de las restricciones, formando un polígono convexo con los siguientes vértices:
 
 | Punto | Coordenadas | Descripción |
