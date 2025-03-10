@@ -29,8 +29,8 @@ Una fábrica produce dos tipos de pintura (X e Y) utilizando dos componentes pri
 - Y = Toneladas de pintura Y a producir por día
 
 ### Función Objetivo
-Maximizar el beneficio total:
 
+Maximizar el beneficio total:
 $$\text{Maximizar}: Z(x,y) = 50X + 60Y \tag{1}$$
 
 ### Restricciones
